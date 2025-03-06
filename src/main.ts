@@ -7,6 +7,8 @@ async function bootstrap() {
 
   
 
-  await app.listen(3000);
+  const port = process.env.PORT || 3000; // Sử dụng giá trị từ .env
+  await app.listen(port);
+  console.log(`Application is running on: http://localhost:${port}`);
 }
 bootstrap();
